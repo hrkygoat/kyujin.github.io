@@ -1,228 +1,254 @@
 @charset "utf-8";
+/* 基本リセットとフォント設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #f0f2f5; /* 薄いグレーの背景色 */
+    color: #333; /* 基本の文字色 */
+    line-height: 1.6; /* 行の高さ */
+}
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: #f5f5f5;
-        }
+.container {
+    max-width: 1200px; /* 全体の最大幅 */
+    margin: 0 auto; /* 中央寄せ */
+    padding: 20px; /* 内側の余白 */
+}
 
-        .header {
-            background: linear-gradient(135deg, #ff8a50, #ff6b35);
-            color: white;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+/* ヘッダー */
+header {
+    background-color: #ff8c00; /* オレンジ */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 軽い影 */
+}
 
-        .header h1 {
-            font-size: 2.5em;
-            font-weight: bold;
-            margin: 0;
-        }
+.header-container {
+    display: flex; /* Flexboxで内部要素を配置 */
+    align-items: center; /* 垂直方向中央揃え */
+    justify-content: flex-start; /* 左寄せ */
+    max-width: 1200px; /* .container と同じ幅に設定 */
+    margin: 0 auto;
+    padding: 0 20px; /* 左右のパディング */
+}
 
-        .search-button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 25px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+.site-title {
+    font-size: 2.5em; /* サイトタイトルのフォントサイズ */
+    color: #fff; /* 白 */
+    font-weight: 700; /* 太字 */
+    margin: 0; /* デフォルトマージンをリセット */
+}
 
-        .search-button:hover {
-            background-color: #45a049;
-            transform: translateY(-2px);
-        }
+.site-title span {
+    font-size: 0.6em; /* サブタイトルのフォントサイズ */
+    color: #fff;
+    display: block; /* ブロック要素にして改行 */
+    margin-top: 5px;
+    opacity: 0.8; /* 少し透明に */
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 30px 20px;
-        }
+/* メインコンテンツエリア */
+.main-content {
+    padding: 40px 0; /* 上下のパディング */
+}
 
-        .breadcrumb {
-            margin-bottom: 30px;
-            color: #666;
-            font-size: 14px;
-        }
+.section-title {
+    font-size: 1.8em; /* セクションタイトルのフォントサイズ */
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center; /* 中央揃え */
+}
 
-        .job-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-bottom: 50px;
-        }
+/* 求人ボックスコンテナ */
+.job-listings {
+    display: grid; /* CSS Gridでレイアウト */
+    grid-template-columns: repeat(2, 1fr); /* デフォルトは2列、各列均等幅 */
+    gap: 30px; /* 求人ボックス間の隙間 */
+}
 
-        .job-card {
-            flex: 1 1 calc(50% - 15px);
-            min-width: 450px;
-        }
+/* 求人ボックス */
+.job-box {
+    background-color: #fff; /* 白背景 */
+    border-top: 8px solid #ff8c00; /* 上のみオレンジのボーダー */
+    border-radius: 8px; /* 角丸 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* ドロップシャドウ */
+    padding: 25px;
+    display: flex; /* Flexboxで内部要素を縦に配置 */
+    flex-direction: column; /* 縦並びにする */
+    align-items: center; /* 中央寄せ */
+    text-align: center; /* テキストも中央寄せ */
+    opacity: 0; /* JavaScriptでフェードインさせるため初期状態は非表示 */
+    transform: translateY(20px); /* 軽く下から上に動かす */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* フェードインと移動のアニメーション */
+    position: relative; /* スライダー内のボタンの配置基準 */
+    overflow: hidden; /* 角丸とスライダーのはみ出しを防ぐ */
+}
 
-        .job-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            border-top: 4px solid #ff8a50;
-        }
+/* フェードインアニメーション用のクラス */
+.job-box.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-        .job-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-        }
+/* 求人画像スライダーのコンテナ */
+.job-image-slider {
+    position: relative;
+    width: 100%; /* 求人ボックスの幅に合わせる */
+    height: 240px; /* ★写真の高さ 240pxに変更 */
+    margin-bottom: 20px;
+    overflow: hidden; /* スライドがはみ出さないように */
+    border-radius: 6px; /* スライダーも角丸に */
+}
 
-        .job-header {
-            background: white;
-            color: #333;
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
+/* スライド画像群のコンテナ */
+.job-image-slider .slides {
+    display: flex; /* 画像を横並びに */
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out; /* スライドアニメーション */
+}
 
-        .job-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #ff6b35;
-        }
+/* 各スライド画像 */
+.job-image-slider img {
+    min-width: 100%; /* 各画像をスライダーの幅に合わせる */
+    height: 100%;
+    object-fit: cover; /* 画像の比率を保ちつつ表示領域に収める */
+    display: block; /* 画像下の余白をなくす */
+}
 
-        .job-content {
-            padding: 20px;
-        }
+/* スライドナビゲーションボタン (左右矢印) */
+.job-image-slider .prev-slide,
+.job-image-slider .next-slide {
+    position: absolute;
+    top: 50%; /* 垂直方向中央 */
+    transform: translateY(-50%); /* 中央揃えのための調整 */
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒背景 */
+    color: #fff; /* 白いアイコン */
+    border: none;
+    padding: 10px 12px;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 50%; /* 円形 */
+    z-index: 10; /* 他の要素より手前に表示 */
+    transition: background-color 0.3s ease; /* ホバーアニメーション */
+}
 
-        .job-image {
-            width: 100%;
-            height: 120px;
-            background-color: #333;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="%23333"><rect width="400" height="120" fill="%23333"/><text x="200" y="65" text-anchor="middle" fill="white" font-size="16">職場写真</text></svg>');
-            background-size: cover;
-            background-position: center;
-        }
+.job-image-slider .prev-slide:hover,
+.job-image-slider .next-slide:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* ホバーで少し濃く */
+}
 
-        .job-image-gallery {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 15px;
-            overflow-x: auto;
-            padding: 5px 0;
-        }
+.job-image-slider .prev-slide {
+    left: 10px; /* 左端から10px */
+}
 
-        .job-image-gallery::-webkit-scrollbar {
-            height: 6px;
-        }
+.job-image-slider .next-slide {
+    right: 10px; /* 右端から10px */
+}
 
-        .job-image-gallery::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 3px;
-        }
+/* ドットインジケーターのコンテナ */
+.job-image-slider .dots {
+    position: absolute;
+    bottom: 10px; /* 下端から10px */
+    left: 50%; /* 垂直方向中央 */
+    transform: translateX(-50%); /* 中央揃えのための調整 */
+    display: flex; /* ドットを横並びに */
+    gap: 8px; /* ドット間の隙間 */
+    z-index: 10;
+}
 
-        .job-image-gallery::-webkit-scrollbar-thumb {
-            background: #ff8a50;
-            border-radius: 3px;
-        }
+/* 各ドット */
+.job-image-slider .dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5); /* 半透明の白 */
+    border-radius: 50%; /* 円形 */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* ホバーアニメーション */
+}
 
-        .job-image-gallery::-webkit-scrollbar-thumb:hover {
-            background: #ff6b35;
-        }
+/* アクティブなドット */
+.job-image-slider .dot.active {
+    background-color: #fff; /* アクティブなドットは白 */
+}
 
-        .job-image-small {
-            width: 80px;
-            height: 60px;
-            background-color: #333;
-            border-radius: 4px;
-            flex-shrink: 0;
-            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60" fill="%23333"><rect width="80" height="60" fill="%23333"/><text x="40" y="35" text-anchor="middle" fill="white" font-size="10">写真</text></svg>');
-            background-size: cover;
-            background-position: center;
-            cursor: pointer;
-            transition: transform 0.2s ease;
-        }
+/* 求人情報エリア */
+.job-info {
+    flex-grow: 1; /* 残りのスペースを埋める */
+    width: 100%; /* 横幅いっぱいに */
+    text-align: left;
+}
 
-        .job-image-small:hover {
-            transform: scale(1.05);
-        }
+.job-title {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
 
-        .job-details {
-            width: 100%;
-        }
+.description {
+    font-size: 0.95em;
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    max-height: 4.8em; /* 3行に制限 (line-height: 1.6 * 3) */
+    overflow: hidden;
+    text-overflow: ellipsis; /* 省略記号 */
+    display: -webkit-box; /* 複数行省略のためのFlexbox */
+    -webkit-line-clamp: 3; /* 3行で省略 */
+    -webkit-box-orient: vertical;
+}
 
-        .job-description {
-            color: #333;
-            margin-bottom: 20px;
-            line-height: 1.6;
-            font-size: 14px;
-        }
+/* 新しい情報項目 */
+.location,
+.business-hours,
+.phone-number {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 5px;
+}
 
-        .job-info {
-            margin-bottom: 20px;
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 8px;
-        }
+/* 「詳細を見る」ボタンを削除したので、関連するCSSも削除 */
+/* .detail-button は不要 */
 
-        .job-info-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            font-size: 14px;
-        }
 
-        .job-info-item:last-child {
-            margin-bottom: 0;
-        }
+/* フッター */
+footer {
+    background-color: #ff8c00; /* オレンジ */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
 
-        .job-info-label {
-            color: #666;
-            font-weight: bold;
-            min-width: 80px;
-        }
+/* レスポンシブ対応 (最大幅767px以下) */
+@media (max-width: 767px) {
+    .job-listings {
+        grid-template-columns: 1fr; /* 767px以下で1列 */
+        gap: 25px;
+    }
 
-        .job-info-value {
-            color: #333;
-            text-align: right;
-        }
+    .job-box {
+        padding: 20px;
+    }
 
-        .apply-button {
-            display: none;
-        }
+    .job-image-slider {
+        height: 200px; /* モバイルでのスライダーの高さ調整 */
+    }
 
-        .footer {
-            background: linear-gradient(135deg, #ff8a50, #ff6b35);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
+    .job-title {
+        font-size: 1.2em;
+    }
 
-        .footer h2 {
-            font-size: 2em;
-            margin-bottom: 15px;
-        }
+    .description,
+    .location,
+    .business-hours,
+    .phone-number {
+        font-size: 0.85em;
+    }
 
-        .footer p {
-            margin-bottom: 20px;
-            opacity: 0.9;
-        }
-
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
-            }
-            
-            .job-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+    /* .detail-button は不要なので、メディアクエリからも削除 */
+}
