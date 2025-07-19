@@ -226,6 +226,16 @@ footer {
 
 /* レスポンシブ対応 (最大幅767px以下) */
 @media (max-width: 767px) {
+
+    .header-container {
+        display: block; /* Flexboxで内部要素を配置 */
+        
+    }
+    
+    .site-title {
+        text-align: center;
+    }
+
     .job-listings {
         grid-template-columns: 1fr; /* 767px以下で1列 */
         gap: 25px;

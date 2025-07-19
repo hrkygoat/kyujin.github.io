@@ -4,26 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>求人サイト レイアウトサンプル</title>
+    <!-- Google Fonts: Noto Sans JP -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons (arrows) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Normalize.css (リセットCSS) へのリンクを追加しました -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- 外部CSSファイルへのリンク -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- ヘッダーセクション -->
     <header>
         <div class="container header-container">
+            <!-- サイトタイトルとキャッチフレーズ -->
             <h1 class="site-title">求人サイト<span>あなたの夢を応援する</span></h1>
-            </div>
+            <!-- 必要であればここにナビゲーションメニューなどを追加 -->
+        </div>
     </header>
 
+    <!-- メインコンテンツセクション -->
     <main class="main-content">
         <div class="container">
             <h2 class="section-title">新着求人情報</h2>
             <div class="job-listings">
+                <!-- 求人ボックスのサンプル (16個) -->
+                <!-- 各求人ボックスはスライドショー機能を持つ -->
                 <div class="job-box">
                     <div class="job-image-slider">
                         <div class="slides">
+                            <!-- 画像パスを修正しました -->
                             <img src="img/A1.jpg" alt="Job Image 1">
                             <img src="img/A2.jpg" alt="Job Image 2">
                             <img src="img/A3.jpg" alt="Job Image 3">
@@ -33,9 +45,9 @@
                         <div class="dots"></div>
                     </div>
                     <div class="job-info">
-                        <h3 class="job-title">サンプル求人</h3>
-                        <p class="description">ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入</p>
-                        <p class="location">所在地:熊本県熊本市〇〇</p>
+                        <h3 class="job-title">Webデザイナー募集！</h3>
+                        <p class="description">新しいWebサイトのデザイン、コーディングをお任せします。チームで協力し、ユーザーに喜ばれるサービスを創りませんか？</p>
+                        <p class="location">所在地: 東京都渋谷区</p>
                         <p class="business-hours">営業時間: 9:00〜18:00</p>
                         <p class="phone-number">電話番号: 03-XXXX-XXXX</p>
                     </div>
@@ -43,375 +55,300 @@
                 <div class="job-box">
                     <div class="job-image-slider">
                         <div class="slides">
-                            <img src="img/A1.jpg" alt="Job Image 1">
-                            <img src="img/A2.jpg" alt="Job Image 2">
-                            <img src="img/A3.jpg" alt="Job Image 3">
+                            <img src="img/A1.jpg" alt="Engineer Image 1">
+                            <img src="img/A2.jpg" alt="Engineer Image 2">
+                            <img src="img/A3.jpg" alt="Engineer Image 3">
                         </div>
                         <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
                         <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
                         <div class="dots"></div>
                     </div>
                     <div class="job-info">
-                        <h3 class="job-title">サンプル求人</h3>
-                        <p class="description">ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入</p>
-                        <p class="location">所在地:熊本県熊本市〇〇</p>
-                        <p class="business-hours">営業時間: 9:00〜18:00</p>
+                        <h3 class="job-title">フロントエンドエンジニア募集</h3>
+                        <p class="description">最新の技術を用いて、ユーザーインターフェースの開発を担当していただきます。React, Vue.js経験者歓迎。</p>
+                        <p class="location">所在地: 大阪府大阪市</p>
+                        <p class="business-hours">営業時間: 10:00〜19:00</p>
+                        <p class="phone-number">電話番号: 06-XXXX-XXXX</p>
+                    </div>
+                </div>
+                <div class="job-box">
+                    <div class="job-image-slider">
+                        <div class="slides">
+                            <img src="img/A1.jpg" alt="Cafe Image 1">
+                            <img src="img/A2.jpg" alt="Cafe Image 2">
+                            <img src="img/A3.jpg" alt="Cafe Image 3">
+                        </div>
+                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="job-info">
+                        <h3 class="job-title">カフェスタッフ（ホール・キッチン）</h3>
+                        <p class="description">お客様に最高のひとときを提供するカフェで、一緒に働きませんか？未経験の方も丁寧に指導します。</p>
+                        <p class="location">所在地: 神奈川県横浜市</p>
+                        <p class="business-hours">営業時間: 8:00〜22:00</p>
+                        <p class="phone-number">電話番号: 045-XXXX-XXXX</p>
+                    </div>
+                </div>
+                <div class="job-box">
+                    <div class="job-image-slider">
+                        <div class="slides">
+                            <img src="img/A1.jpg" alt="Business Image 1">
+                            <img src="img/A2.jpg" alt="Business Image 2">
+                            <img src="img/A3.jpg" alt="Business Image 3">
+                        </div>
+                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="job-info">
+                        <h3 class="job-title">営業職（法人向けソリューション）</h3>
+                        <p class="description">企業の課題解決をサポートするソリューション営業。顧客との長期的な関係構築を目指します。</p>
+                        <p class="location">所在地: 愛知県名古屋市</p>
+                        <p class="business-hours">営業時間: 9:00〜17:30</p>
+                        <p class="phone-number">電話番号: 052-XXXX-XXXX</p>
+                    </div>
+                </div>
+                <div class="job-box">
+                    <div class="job-image-slider">
+                        <div class="slides">
+                            <img src="img/A1.jpg" alt="Care Image 1">
+                            <img src="img/A2.jpg" alt="Care Image 2">
+                            <img src="img/A3.jpg" alt="Care Image 3">
+                        </div>
+                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="job-info">
+                        <h3 class="job-title">介護職員（施設勤務）</h3>
+                        <p class="description">利用者様の日々の生活をサポートするお仕事です。資格取得支援制度あり。</p>
+                        <p class="location">所在地: 埼玉県さいたま市</p>
+                        <p class="business-hours">営業時間: シフト制</p>
+                        <p class="phone-number">電話番号: 048-XXXX-XXXX</p>
+                    </div>
+                </div>
+                <div class="job-box">
+                    <div class="job-image-slider">
+                        <div class="slides">
+                            <img src="img/A1.jpg" alt="Data Image 1">
+                            <img src="img/A2.jpg" alt="Data Image 2">
+                            <img src="img/A3.jpg" alt="Data Image 3">
+                        </div>
+                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="job-info">
+                        <h3 class="job-title">データサイエンティスト募集</h3>
+                        <p class="description">ビッグデータの分析、機械学習モデルの構築を通じて、ビジネス課題を解決します。</p>
+                        <p class="location">所在地: 福岡県福岡市</p>
+                        <p class="business-hours">営業時間: 9:30〜18:00</p>
+                        <p class="phone-number">電話番号: 092-XXXX-XXXX</p>
+                    </div>
+                </div>
+                <div class="job-box">
+                    <div class="job-image-slider">
+                        <div class="slides">
+                            <img src="img/A1.jpg" alt="Graphic Image 1">
+                            <img src="img/A2.jpg" alt="Graphic Image 2">
+                            <img src="img/A3.jpg" alt="Graphic Image 3">
+                        </div>
+                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="job-info">
+                        <h3 class="job-title">グラフィックデザイナー</h3>
+                        <p class="description">広告、パンフレット、Webサイトのビジュアルデザインなど、幅広いクリエイティブ業務。</p>
+                        <p class="location">所在地: 京都府京都市</p>
+                        <p class="business-hours">営業時間: 10:00〜19:00</p>
+                        <p class="phone-number">電話番号: 075-XXXX-XXXX</p>
+                    </div>
+                </div>
+                <div class="job-box">
+                    <div class="job-image-slider">
+                        <div class="slides">
+                            <img src="img/A1.jpg" alt="Account Image 1">
+                            <img src="img/A2.jpg" alt="Account Image 2">
+                            <img src="img/A3.jpg" alt="Account Image 3">
+                        </div>
+                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="job-info">
+                        <h3 class="job-title">経理事務スタッフ</h3>
+                        <p class="description">経理伝票処理、月次・年次決算補助など、会社の財務を支える重要なお仕事です。</p>
+                        <p class="location">所在地: 東京都千代田区</p>
+                        <p class="business-hours">営業時間: 9:00〜17:00</p>
                         <p class="phone-number">電話番号: 03-XXXX-XXXX</p>
                     </div>
                 </div>
                 <div class="job-box">
                     <div class="job-image-slider">
                         <div class="slides">
-                            <img src="img/A1.jpg" alt="Job Image 1">
-                            <img src="img/A2.jpg" alt="Job Image 2">
-                            <img src="img/A3.jpg" alt="Job Image 3">
+                            <img src="img/A1.jpg" alt="SE Image 1">
+                            <img src="img/A2.jpg" alt="SE Image 2">
+                            <img src="img/A3.jpg" alt="SE Image 3">
                         </div>
                         <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
                         <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
                         <div class="dots"></div>
                     </div>
                     <div class="job-info">
-                        <h3 class="job-title">サンプル求人</h3>
-                        <p class="description">ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入</p>
-                        <p class="location">所在地:熊本県熊本市〇〇</p>
+                        <h3 class="job-title">システムエンジニア（SE）</h3>
+                        <p class="description">新規システムの設計・開発から保守運用まで、一貫して携わることができます。</p>
+                        <p class="location">所在地: 北海道札幌市</p>
                         <p class="business-hours">営業時間: 9:00〜18:00</p>
+                        <p class="phone-number">電話番号: 011-XXXX-XXXX</p>
+                    </div>
+                </div>
+                <div class="job-box">
+                    <div class="job-image-slider">
+                        <div class="slides">
+                            <img src="img/A1.jpg" alt="HR Image 1">
+                            <img src="img/A2.jpg" alt="HR Image 2">
+                            <img src="img/A3.jpg" alt="HR Image 3">
+                        </div>
+                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="job-info">
+                        <h3 class="job-title">人事採用担当</h3>
+                        <p class="description">新卒・中途採用の企画から実行、内定者フォローまで幅広く担当していただきます。</p>
+                        <p class="location">所在地: 宮城県仙台市</p>
+                        <p class="business-hours">営業時間: 9:00〜17:00</p>
+                        <p class="phone-number">電話番号: 022-XXXX-XXXX</p>
+                    </div>
+                </div>
+                <div class="job-box">
+                    <div class="job-image-slider">
+                        <div class="slides">
+                            <img src="img/A1.jpg" alt="Medical Image 1">
+                            <img src="img/A2.jpg" alt="Medical Image 2">
+                            <img src="img/A3.jpg" alt="Medical Image 3">
+                        </div>
+                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="job-info">
+                        <h3 class="job-title">医療事務スタッフ</h3>
+                        <p class="description">受付業務、会計、レセプト作成など、病院の運営を支える大切なお仕事です。</p>
+                        <p class="location">所在地: 静岡県浜松市</p>
+                        <p class="business-hours">営業時間: 8:30〜17:30</p>
+                        <p class="phone-number">電話番号: 053-XXXX-XXXX</p>
+                    </div>
+                </div>
+                <div class="job-box">
+                    <div class="job-image-slider">
+                        <div class="slides">
+                            <img src="img/A1.jpg" alt="Hotel Image 1">
+                            <img src="img/A2.jpg" alt="Hotel Image 2">
+                            <img src="img/A3.jpg" alt="Hotel Image 3">
+                        </div>
+                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="job-info">
+                        <h3 class="job-title">ホテルスタッフ（フロント）</h3>
+                        <p class="description">お客様のお出迎えからチェックアウトまで、笑顔で丁寧なサービスを提供します。</p>
+                        <p class="location">所在地: 沖縄県那覇市</p>
+                        <p class="business-hours">営業時間: シフト制</p>
+                        <p class="phone-number">電話番号: 098-XXXX-XXXX</p>
+                    </div>
+                </div>
+                <div class="job-box">
+                    <div class="job-image-slider">
+                        <div class="slides">
+                            <img src="img/A1.jpg" alt="PR Image 1">
+                            <img src="img/A2.jpg" alt="PR Image 2">
+                            <img src="img/A3.jpg" alt="PR Image 3">
+                        </div>
+                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="job-info">
+                        <h3 class="job-title">広報・PR担当</h3>
+                        <p class="description">企業のブランドイメージ向上に向けた広報戦略の立案・実行、メディア対応など。</p>
+                        <p class="location">所在地: 東京都港区</p>
+                        <p class="business-hours">営業時間: 10:00〜18:00</p>
                         <p class="phone-number">電話番号: 03-XXXX-XXXX</p>
                     </div>
                 </div>
                 <div class="job-box">
                     <div class="job-image-slider">
                         <div class="slides">
-                            <img src="img/A1.jpg" alt="Job Image 1">
-                            <img src="img/A2.jpg" alt="Job Image 2">
-                            <img src="img/A3.jpg" alt="Job Image 3">
+                            <img src="img/A1.jpg" alt="CS Image 1">
+                            <img src="img/A2.jpg" alt="CS Image 2">
+                            <img src="img/A3.jpg" alt="CS Image 3">
                         </div>
                         <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
                         <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
                         <div class="dots"></div>
                     </div>
                     <div class="job-info">
-                        <h3 class="job-title">サンプル求人</h3>
-                        <p class="description">ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入</p>
-                        <p class="location">所在地:熊本県熊本市〇〇</p>
-                        <p class="business-hours">営業時間: 9:00〜18:00</p>
+                        <h3 class="job-title">カスタマーサポート</h3>
+                        <p class="description">お客様からの問い合わせ対応、サービス改善提案など、顧客満足度向上に貢献します。</p>
+                        <p class="location">所在地: 東京都新宿区</p>
+                        <p class="business-hours">営業時間: 9:00〜17:00</p>
                         <p class="phone-number">電話番号: 03-XXXX-XXXX</p>
                     </div>
                 </div>
                 <div class="job-box">
                     <div class="job-image-slider">
                         <div class="slides">
-                            <img src="img/A1.jpg" alt="Job Image 1">
-                            <img src="img/A2.jpg" alt="Job Image 2">
-                            <img src="img/A3.jpg" alt="Job Image 3">
+                            <img src="img/A1.jpg" alt="Product Image 1">
+                            <img src="img/A2.jpg" alt="Product Image 2">
+                            <img src="img/A3.jpg" alt="Product Image 3">
                         </div>
                         <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
                         <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
                         <div class="dots"></div>
                     </div>
                     <div class="job-info">
-                        <h3 class="job-title">サンプル求人</h3>
-                        <p class="description">ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入</p>
-                        <p class="location">所在地:熊本県熊本市〇〇</p>
-                        <p class="business-hours">営業時間: 9:00〜18:00</p>
-                        <p class="phone-number">電話番号: 03-XXXX-XXXX</p>
+                        <h3 class="job-title">商品企画・開発</h3>
+                        <p class="description">新しい商品の企画から市場投入まで、一連のプロセスを担当します。</p>
+                        <p class="location">所在地: 千葉県千葉市</p>
+                        <p class="business-hours">営業時間: 9:30〜18:30</p>
+                        <p class="phone-number">電話番号: 043-XXXX-XXXX</p>
                     </div>
                 </div>
                 <div class="job-box">
                     <div class="job-image-slider">
                         <div class="slides">
-                            <img src="img/A1.jpg" alt="Job Image 1">
-                            <img src="img/A2.jpg" alt="Job Image 2">
-                            <img src="img/A3.jpg" alt="Job Image 3">
+                            <img src="img/A1.jpg" alt="Manager Image 1">
+                            <img src="img/A2.jpg" alt="Manager Image 2">
+                            <img src="img/A3.jpg" alt="Manager Image 3">
                         </div>
                         <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
                         <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
                         <div class="dots"></div>
                     </div>
                     <div class="job-info">
-                        <h3 class="job-title">サンプル求人</h3>
-                        <p class="description">ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入</p>
-                        <p class="location">所在地:熊本県熊本市〇〇</p>
-                        <p class="business-hours">営業時間: 9:00〜18:00</p>
-                        <p class="phone-number">電話番号: 03-XXXX-XXXX</p>
+                        <h3 class="job-title">店舗運営マネージャー候補</h3>
+                        <p class="description">店舗の売上管理、スタッフ育成、顧客サービス向上など、店舗全体を統括します。</p>
+                        <p class="location">所在地: 全国（転勤あり）</p>
+                        <p class="business-hours">営業時間: 店舗による</p>
+                        <p class="phone-number">電話番号: 0120-XXX-XXX</p>
                     </div>
                 </div>
-                <div class="job-box">
-                    <div class="job-image-slider">
-                        <div class="slides">
-                            <img src="img/A1.jpg" alt="Job Image 1">
-                            <img src="img/A2.jpg" alt="Job Image 2">
-                            <img src="img/A3.jpg" alt="Job Image 3">
-                        </div>
-                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
-                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
-                        <div class="dots"></div>
-                    </div>
-                    <div class="job-info">
-                        <h3 class="job-title">サンプル求人</h3>
-                        <p class="description">ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入</p>
-                        <p class="location">所在地:熊本県熊本市〇〇</p>
-                        <p class="business-hours">営業時間: 9:00〜18:00</p>
-                        <p class="phone-number">電話番号: 03-XXXX-XXXX</p>
-                    </div>
-                </div>
-                <div class="job-box">
-                    <div class="job-image-slider">
-                        <div class="slides">
-                            <img src="img/A1.jpg" alt="Job Image 1">
-                            <img src="img/A2.jpg" alt="Job Image 2">
-                            <img src="img/A3.jpg" alt="Job Image 3">
-                        </div>
-                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
-                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
-                        <div class="dots"></div>
-                    </div>
-                    <div class="job-info">
-                        <h3 class="job-title">サンプル求人</h3>
-                        <p class="description">ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入</p>
-                        <p class="location">所在地:熊本県熊本市〇〇</p>
-                        <p class="business-hours">営業時間: 9:00〜18:00</p>
-                        <p class="phone-number">電話番号: 03-XXXX-XXXX</p>
-                    </div>
-                </div>
-                <div class="job-box">
-                    <div class="job-image-slider">
-                        <div class="slides">
-                            <img src="img/A1.jpg" alt="Job Image 1">
-                            <img src="img/A2.jpg" alt="Job Image 2">
-                            <img src="img/A3.jpg" alt="Job Image 3">
-                        </div>
-                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
-                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
-                        <div class="dots"></div>
-                    </div>
-                    <div class="job-info">
-                        <h3 class="job-title">サンプル求人</h3>
-                        <p class="description">ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入</p>
-                        <p class="location">所在地:熊本県熊本市〇〇</p>
-                        <p class="business-hours">営業時間: 9:00〜18:00</p>
-                        <p class="phone-number">電話番号: 03-XXXX-XXXX</p>
-                    </div>
-                </div>
-                <div class="job-box">
-                    <div class="job-image-slider">
-                        <div class="slides">
-                            <img src="img/A1.jpg" alt="Job Image 1">
-                            <img src="img/A2.jpg" alt="Job Image 2">
-                            <img src="img/A3.jpg" alt="Job Image 3">
-                        </div>
-                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
-                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
-                        <div class="dots"></div>
-                    </div>
-                    <div class="job-info">
-                        <h3 class="job-title">サンプル求人</h3>
-                        <p class="description">ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入</p>
-                        <p class="location">所在地:熊本県熊本市〇〇</p>
-                        <p class="business-hours">営業時間: 9:00〜18:00</p>
-                        <p class="phone-number">電話番号: 03-XXXX-XXXX</p>
-                    </div>
-                </div>
-                <div class="job-box">
-                    <div class="job-image-slider">
-                        <div class="slides">
-                            <img src="img/A1.jpg" alt="Job Image 1">
-                            <img src="img/A2.jpg" alt="Job Image 2">
-                            <img src="img/A3.jpg" alt="Job Image 3">
-                        </div>
-                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
-                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
-                        <div class="dots"></div>
-                    </div>
-                    <div class="job-info">
-                        <h3 class="job-title">サンプル求人</h3>
-                        <p class="description">ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入</p>
-                        <p class="location">所在地:熊本県熊本市〇〇</p>
-                        <p class="business-hours">営業時間: 9:00〜18:00</p>
-                        <p class="phone-number">電話番号: 03-XXXX-XXXX</p>
-                    </div>
-                </div>
-                <div class="job-box">
-                    <div class="job-image-slider">
-                        <div class="slides">
-                            <img src="img/A1.jpg" alt="Job Image 1">
-                            <img src="img/A2.jpg" alt="Job Image 2">
-                            <img src="img/A3.jpg" alt="Job Image 3">
-                        </div>
-                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
-                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
-                        <div class="dots"></div>
-                    </div>
-                    <div class="job-info">
-                        <h3 class="job-title">サンプル求人</h3>
-                        <p class="description">ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入</p>
-                        <p class="location">所在地:熊本県熊本市〇〇</p>
-                        <p class="business-hours">営業時間: 9:00〜18:00</p>
-                        <p class="phone-number">電話番号: 03-XXXX-XXXX</p>
-                    </div>
-                </div>
-                <div class="job-box">
-                    <div class="job-image-slider">
-                        <div class="slides">
-                            <img src="img/A1.jpg" alt="Job Image 1">
-                            <img src="img/A2.jpg" alt="Job Image 2">
-                            <img src="img/A3.jpg" alt="Job Image 3">
-                        </div>
-                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
-                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
-                        <div class="dots"></div>
-                    </div>
-                    <div class="job-info">
-                        <h3 class="job-title">サンプル求人</h3>
-                        <p class="description">ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入</p>
-                        <p class="location">所在地:熊本県熊本市〇〇</p>
-                        <p class="business-hours">営業時間: 9:00〜18:00</p>
-                        <p class="phone-number">電話番号: 03-XXXX-XXXX</p>
-                    </div>
-                </div>
-                <div class="job-box">
-                    <div class="job-image-slider">
-                        <div class="slides">
-                            <img src="img/A1.jpg" alt="Job Image 1">
-                            <img src="img/A2.jpg" alt="Job Image 2">
-                            <img src="img/A3.jpg" alt="Job Image 3">
-                        </div>
-                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
-                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
-                        <div class="dots"></div>
-                    </div>
-                    <div class="job-info">
-                        <h3 class="job-title">サンプル求人</h3>
-                        <p class="description">ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入</p>
-                        <p class="location">所在地:熊本県熊本市〇〇</p>
-                        <p class="business-hours">営業時間: 9:00〜18:00</p>
-                        <p class="phone-number">電話番号: 03-XXXX-XXXX</p>
-                    </div>
-                </div>
-                <div class="job-box">
-                    <div class="job-image-slider">
-                        <div class="slides">
-                            <img src="img/A1.jpg" alt="Job Image 1">
-                            <img src="img/A2.jpg" alt="Job Image 2">
-                            <img src="img/A3.jpg" alt="Job Image 3">
-                        </div>
-                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
-                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
-                        <div class="dots"></div>
-                    </div>
-                    <div class="job-info">
-                        <h3 class="job-title">サンプル求人</h3>
-                        <p class="description">ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入</p>
-                        <p class="location">所在地:熊本県熊本市〇〇</p>
-                        <p class="business-hours">営業時間: 9:00〜18:00</p>
-                        <p class="phone-number">電話番号: 03-XXXX-XXXX</p>
-                    </div>
-                </div>
-                <div class="job-box">
-                    <div class="job-image-slider">
-                        <div class="slides">
-                            <img src="img/A1.jpg" alt="Job Image 1">
-                            <img src="img/A2.jpg" alt="Job Image 2">
-                            <img src="img/A3.jpg" alt="Job Image 3">
-                        </div>
-                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
-                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
-                        <div class="dots"></div>
-                    </div>
-                    <div class="job-info">
-                        <h3 class="job-title">サンプル求人</h3>
-                        <p class="description">ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入</p>
-                        <p class="location">所在地:熊本県熊本市〇〇</p>
-                        <p class="business-hours">営業時間: 9:00〜18:00</p>
-                        <p class="phone-number">電話番号: 03-XXXX-XXXX</p>
-                    </div>
-                </div>
-                <div class="job-box">
-                    <div class="job-image-slider">
-                        <div class="slides">
-                            <img src="img/A1.jpg" alt="Job Image 1">
-                            <img src="img/A2.jpg" alt="Job Image 2">
-                            <img src="img/A3.jpg" alt="Job Image 3">
-                        </div>
-                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
-                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
-                        <div class="dots"></div>
-                    </div>
-                    <div class="job-info">
-                        <h3 class="job-title">サンプル求人</h3>
-                        <p class="description">ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入</p>
-                        <p class="location">所在地:熊本県熊本市〇〇</p>
-                        <p class="business-hours">営業時間: 9:00〜18:00</p>
-                        <p class="phone-number">電話番号: 03-XXXX-XXXX</p>
-                    </div>
-                </div>
-                <div class="job-box">
-                    <div class="job-image-slider">
-                        <div class="slides">
-                            <img src="img/A1.jpg" alt="Job Image 1">
-                            <img src="img/A2.jpg" alt="Job Image 2">
-                            <img src="img/A3.jpg" alt="Job Image 3">
-                        </div>
-                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
-                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
-                        <div class="dots"></div>
-                    </div>
-                    <div class="job-info">
-                        <h3 class="job-title">サンプル求人</h3>
-                        <p class="description">ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入</p>
-                        <p class="location">所在地:熊本県熊本市〇〇</p>
-                        <p class="business-hours">営業時間: 9:00〜18:00</p>
-                        <p class="phone-number">電話番号: 03-XXXX-XXXX</p>
-                    </div>
-                </div>
-                <div class="job-box">
-                    <div class="job-image-slider">
-                        <div class="slides">
-                            <img src="img/A1.jpg" alt="Job Image 1">
-                            <img src="img/A2.jpg" alt="Job Image 2">
-                            <img src="img/A3.jpg" alt="Job Image 3">
-                        </div>
-                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
-                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
-                        <div class="dots"></div>
-                    </div>
-                    <div class="job-info">
-                        <h3 class="job-title">サンプル求人</h3>
-                        <p class="description">ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入</p>
-                        <p class="location">所在地:熊本県熊本市〇〇</p>
-                        <p class="business-hours">営業時間: 9:00〜18:00</p>
-                        <p class="phone-number">電話番号: 03-XXXX-XXXX</p>
-                    </div>
-                </div>
-                <div class="job-box">
-                    <div class="job-image-slider">
-                        <div class="slides">
-                            <img src="img/A1.jpg" alt="Job Image 1">
-                            <img src="img/A2.jpg" alt="Job Image 2">
-                            <img src="img/A3.jpg" alt="Job Image 3">
-                        </div>
-                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
-                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
-                        <div class="dots"></div>
-                    </div>
-                    <div class="job-info">
-                        <h3 class="job-title">サンプル求人</h3>
-                        <p class="description">ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入、ここにテキストを記入</p>
-                        <p class="location">所在地:熊本県熊本市〇〇</p>
-                        <p class="business-hours">営業時間: 9:00〜18:00</p>
-                        <p class="phone-number">電話番号: 03-XXXX-XXXX</p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </main>
 
+    <!-- フッターセクション -->
     <footer>
         <div class="container">
             <p>&copy; 2025 求人サイトサンプル. All Rights Reserved.</p>
         </div>
     </footer>
 
+    <!-- 外部JavaScriptファイルへのリンク -->
     <script src="js/script.js"></script>
 </body>
 </html>
