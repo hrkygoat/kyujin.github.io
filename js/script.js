@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // 自動スライドを開始
         function startAutoSlide() {
-            slideInterval = setInterval(nextSlide, 5000); // 3秒ごとにスライド
+            slideInterval = setInterval(nextSlide, 3000); // 3秒ごとにスライド
         }
 
         // 自動スライドをリセット (手動操作後など)
