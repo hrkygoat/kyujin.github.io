@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "UTF-8";
 /* 基本リセットとフォント設定 */
 * {
     margin: 0;
@@ -97,7 +97,7 @@ header {
 .job-image-slider {
     position: relative;
     width: 100%; /* 求人ボックスの幅に合わせる */
-    height: 240px; /* ★写真の高さ 240pxに変更 */
+    height: 240px; /* 写真の高さ 240px */
     margin-bottom: 20px;
     overflow: hidden; /* スライドがはみ出さないように */
     border-radius: 6px; /* スライダーも角丸に */
@@ -109,6 +109,7 @@ header {
     width: 100%;
     height: 100%;
     transition: transform 0.5s ease-in-out; /* スライドアニメーション */
+    /* スワイプ操作中にtransitionを一時的に無効にするために、JSで操作される */
 }
 
 /* 各スライド画像 */
@@ -194,12 +195,13 @@ header {
     color: #666;
     margin-top: 10px;
     margin-bottom: 15px;
-    max-height: 4.8em; /* 3行に制限 (line-height: 1.6 * 3) */
-    overflow: hidden;
-    text-overflow: ellipsis; /* 省略記号 */
-    display: -webkit-box; /* 複数行省略のためのFlexbox */
-    -webkit-line-clamp: 3; /* 3行で省略 */
-    -webkit-box-orient: vertical;
+    /* 以下のプロパティを削除または無効化し、文章全体を表示させる */
+    max-height: none; /* 最大高さを解除 */
+    overflow: visible; /* はみ出しを許可 */
+    text-overflow: clip; /* 省略記号を非表示 */
+    display: block; /* -webkit-boxを解除 */
+    -webkit-line-clamp: unset; /* 行数制限を解除 */
+    -webkit-box-orient: unset; /* ボックスの方向を解除 */
 }
 
 /* 新しい情報項目 */
@@ -210,10 +212,6 @@ header {
     color: #555;
     margin-bottom: 5px;
 }
-
-/* 「詳細を見る」ボタンを削除したので、関連するCSSも削除 */
-/* .detail-button は不要 */
-
 
 /* フッター */
 footer {
@@ -226,7 +224,6 @@ footer {
 
 /* レスポンシブ対応 (最大幅767px以下) */
 @media (max-width: 767px) {
-
     .header-container {
         display: block; /* Flexboxで内部要素を配置 */
         
@@ -235,6 +232,7 @@ footer {
     .site-title {
         text-align: center;
     }
+
 
     .job-listings {
         grid-template-columns: 1fr; /* 767px以下で1列 */
@@ -259,6 +257,4 @@ footer {
     .phone-number {
         font-size: 0.85em;
     }
-
-    /* .detail-button は不要なので、メディアクエリからも削除 */
 }
